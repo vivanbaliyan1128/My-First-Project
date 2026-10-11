@@ -1,0 +1,375 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navbar nav a,
+.footer a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.footer a:hover {
+    color: #e50914;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right select {
+    background: #111;
+    color: white;
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 7px;
+}
+
+.sign-in {
+    background: #e50914;
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sign-in:hover {
+    background: #b20710;
+}
+
+/* Hero Banner */
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 60px 5%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.7) 40%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        linear-gradient(
+            0deg,
+            #141414 0%,
+            transparent 35%
+        ),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1800&q=85");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #e50914;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+.description {
+    max-width: 520px;
+    color: #e0e0e0;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background: #fff;
+    color: #111;
+}
+
+.btn-primary:hover {
+    background: #ddd;
+}
+
+.btn-secondary {
+    background: rgba(109, 109, 110, 0.75);
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: rgba(109, 109, 110, 0.5);
+}
+
+/* Movie Sections */
+.movie-section {
+    padding: 25px 5%;
+    overflow: hidden;
+}
+
+.movie-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.movie-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px 3px 18px;
+    scroll-behavior: smooth;
+}
+
+.movie-row::-webkit-scrollbar {
+    height: 7px;
+}
+
+.movie-row::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.movie-row::-webkit-scrollbar-thumb:hover {
+    background: #e50914;
+}
+
+/* Movie Cards */
+.movie-card {
+    position: relative;
+    flex: 0 0 190px;
+    height: 285px;
+    border-radius: 7px;
+    overflow: hidden;
+    background: #292929;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.06);
+    z-index: 2;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.number {
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    font-size: 58px;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 2px #111;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Footer */
+.footer {
+    padding: 55px 8% 35px;
+    color: #aaa;
+}
+
+.footer > p {
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.footer-links a {
+    font-size: 13px;
+}
+
+.copyright {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 470px;
+    }
+
+    .movie-card {
+        flex-basis: 165px;
+        height: 250px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .nav-right select {
+        max-width: 85px;
+        font-size: 12px;
+    }
+
+    .sign-in {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .navbar nav {
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 40px 5%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 11px 17px;
+        font-size: 14px;
+    }
+
+    .movie-section {
+        padding: 20px 4%;
+    }
+
+    .movie-section h2 {
+        font-size: 20px;
+    }
+
+    .movie-card {
+        flex-basis: 135px;
+        height: 205px;
+    }
+
+    .number {
+        font-size: 42px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
